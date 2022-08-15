@@ -52,11 +52,11 @@ pvtApp.config(function ($stateProvider) {
     .state('results.empty', {
         templateUrl: 'results/results.empty.html'
     })
-    .state('home', {
-        url: '/',
-        templateUrl: 'home/home.html',
-        controller: 'HomeCtrl'
-    })
+    /* .state('home', {
+    //     url: '/',
+    //     templateUrl: 'home/home.html',
+    //     controller: 'HomeCtrl'
+    */ })
 });
 
 pvtApp.config(function ($urlRouterProvider) {
