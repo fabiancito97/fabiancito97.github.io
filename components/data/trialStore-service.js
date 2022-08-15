@@ -27,6 +27,7 @@ angular.module('pvtApp').factory('trialStore', function ($window) {
             var key = store.key(i);
             if (key.substr(0, prefix.length) === prefix) {
                 results.push({
+                    //'pvtid': sbj_id,
                     'date': parseInt(key.substr(prefix.length + 1)),
                     'data': store.getItem(key).split(',').map(parseFloat)
                 });
