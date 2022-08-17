@@ -1,3 +1,5 @@
+var url_main = "https://github.com/fabiancito97/fabiancito97.github.io/tree/master"
+
 var pvtApp = angular.module("pvtApp", [
     'mgcrea.ngStrap',
     'ui.router',
@@ -11,50 +13,50 @@ pvtApp.config(function($compileProvider) {
 
 pvtApp.config(function ($stateProvider) {
     $stateProvider.state('pretrial', {
-        url: '/pretrial',
+        url: url_main + '/pretrial',
         template: "<div ui-view></div>",
         controller: 'PreTrialCtrl'
     })
     .state('pretrial.instructions', {
-        url: '/instructions',
-        templateUrl: 'pretrial/pretrial.instructions.html',
+        url: url_main + '/instructions',
+        templateUrl: url_main + '/' + 'pretrial/pretrial.instructions.html',
         controller: 'PreTrialInstructionsCtrl'
     })
     .state('pretrial.countdown', {
-        url: '/countdown',
-        templateUrl: 'pretrial/pretrial.countdown.html',
+        url: url_main + '/countdown',
+        templateUrl: url_main + '/' + 'pretrial/pretrial.countdown.html',
         controller: 'PreTrialCountdownCtrl'
     })
     .state('settings', {
-        url: '/settings',
-        templateUrl: 'settings/settings.html',
+        url: url_main + '/settings',
+        templateUrl: url_main + '/' + 'settings/settings.html',
         controller: 'SettingsCtrl'
     })
     .state('trial', {
-        url: '/trial',
-        templateUrl: 'trial/trial.html',
+        url: url_main + '/trial',
+        templateUrl: url_main + '/' + 'trial/trial.html',
         controller: 'TrialCtrl'
     })
     .state('results', {
         url: '/results',
-        templateUrl: 'results/results.html',
+        templateUrl: url_main + '/' + 'results/results.html',
         controller: 'ResultsCtrl'
     })
     .state('results.trial', {
-        url: '/:trialId',
-        templateUrl: 'results/results.trial.html',
+        url: url_main + '/:trialId',
+        templateUrl: url_main + '/' + 'results/results.trial.html',
         controller: 'ResultsTrialCtrl'
     })
     .state('results.all', {
-        templateUrl: 'results/results.all.html',
+        templateUrl: url_main + '/' + 'results/results.all.html',
         controller: 'AllResultsCtrl'
     })
     .state('results.empty', {
-        templateUrl: 'results/results.empty.html'
+        templateUrl: url_main + '/' + 'results/results.empty.html'
     })
     .state('home', {
-         url: '/',
-         templateUrl: 'home/home.html',
+         url: url_main + '/',
+         templateUrl: url_main + '/' + 'home/home.html',
          controller: 'HomeCtrl'
     })
 });
