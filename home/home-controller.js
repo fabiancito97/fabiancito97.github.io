@@ -1,6 +1,10 @@
 angular.module('pvtApp').controller('HomeCtrl', function ($scope, $location) {
 	$scope.buildLink = function(){
-      return $location.absUrl();
+	  
+	  var url = $location.absUrl();
+	  var id = url.substring(url.lastIndexOf('?id=') + 4, url.lastIndexOf('#/'));	
+      
+	  return id 
       
     }
 
@@ -8,7 +12,7 @@ angular.module('pvtApp').controller('HomeCtrl', function ($scope, $location) {
 
 // id of subject
 
-//var id = url.substring(url.lastIndexOf('?id=') + 4, url.lastIndexOf('#/'));
+//
 
 //var id = url.substring(url.lastIndexOf('/') + 1);
 
