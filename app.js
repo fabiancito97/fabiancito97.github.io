@@ -16,7 +16,7 @@ pvtApp.config(function ($stateProvider) {
         controller: 'PreTrialCtrl'
     })
     .state('pretrial.instructions', {
-        url: '/instructions', //
+        url: '/', //instructions
         templateUrl: 'pretrial/pretrial.instructions.html',
         controller: 'PreTrialInstructionsCtrl'
     })
@@ -52,13 +52,16 @@ pvtApp.config(function ($stateProvider) {
     .state('results.empty', {
         templateUrl: 'results/results.empty.html'
     })
-    .state('home', {
-        url: '/',
-        templateUrl: 'home/home.html',
-        controller: 'HomeCtrl'
-    })
+    //.state('home', {
+    //    url: '/',
+    //    templateUrl: 'home/home.html',
+    //    controller: 'HomeCtrl'
+    //})
 });
 
+
+// set the first states!!!!
+
 pvtApp.config(function ($urlRouterProvider) {
-    $urlRouterProvider.otherwise('/trial')
+    $urlRouterProvider.otherwise('/')
 });
