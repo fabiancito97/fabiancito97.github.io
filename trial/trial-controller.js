@@ -22,9 +22,11 @@ angular.module('pvtApp').controller('TrialCtrl', function ($scope, $state, $docu
         if (value) { $scope.data.push(value); }
     });
 
+    // go to final template
     trialTimer.onDisable.add(function () {
         var date = trialStore.save($scope.data);
-        $state.go('results.trial', { trialId: date }); // loads most recent result
+        //$state.go('results.trial', { trialId: date }); // loads most recent result
+		$state.go('final'); // go to final
     });
 
     $scope.$on("$destroy", function () {

@@ -57,6 +57,11 @@ pvtApp.config(function ($stateProvider) {
         templateUrl: 'home/home.html',
         controller: 'HomeCtrl'
     })
+	.state('final', {
+        url: '/final',
+        templateUrl: 'final/final.html',
+        controller: 'FinalCtrl'
+    })
 });
 
 
