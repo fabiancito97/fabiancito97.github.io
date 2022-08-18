@@ -13,12 +13,12 @@ angular.module('pvtApp').factory('trialStore', function ($window, $location) {
 		// create an id with url, similar to "https://fabiancito97.github.io/?id=<id>#/trial";
 		var id = url; // get url;
 		// clean url to get the identifier
-		var id = id.substring(0, id.absUrl().lastIndexOf('#/trial'));
+		var id = id.substring(0, id.lastIndexOf('#/trial'));
         var id = id.substring(id.lastIndexOf("/") + 1);
-		if (id) id = identifier.substring(identifier.lastIndexOf('?id=') + 4);
+		if (id) id = id.substring(id.lastIndexOf('?id=') + 4);
 		
         // if empty, asing a identifier based on miliseconds since 01-01-1970;
-        else identifier = prefix + ',' + Date.now();
+        else id = prefix + ',' + Date.now();
 
         store.setItem(id, data.join());
         return id;
