@@ -10,14 +10,14 @@ angular.module('pvtApp').factory('trialStore', function ($window, $location) {
             return false;
         }
 		
-		// create an id with url, similar to "https://fabiancito97.github.io/?id=<id>#/trial"
-		var id = $location.absUrl(); // get url;
+		// create an id with url, similar to "https://fabiancito97.github.io/?id=<id>#/trial";
+		var id = url; // get url;
 		// clean url to get the identifier
 		var id = id.substring(0, id.absUrl().lastIndexOf('#/trial'));
         var id = id.substring(id.lastIndexOf("/") + 1);
 		if (id) id = identifier.substring(identifier.lastIndexOf('?id=') + 4);
 		
-        // if empty, asing a identifier based on miliseconds since 01-01-1970
+        // if empty, asing a identifier based on miliseconds since 01-01-1970;
         else identifier = prefix + ',' + Date.now();
 
         store.setItem(id, data.join());
