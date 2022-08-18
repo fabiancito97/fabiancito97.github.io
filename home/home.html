@@ -11,17 +11,20 @@
             suddenly, and your job will be to respond as soon as possible, either with the spacebar or the mouse. When
             someone plays it, the screen looks something like this:
         </p>
-		<p class="col-xs-6 col-xs-offset-3">
+	</div>
+	<div class="row">
+        <h2 class="instruction-timer col-xs-2 col-xs-offset-5"><timer-display></timer-display></h2>
+    </div>
+    <div class="row copy">
+	<p class="col-xs-6 col-xs-offset-3">
 		    Cambio 3
-		</p>
+	</p>
 		<p class="col-xs-6 col-xs-offset-3">
 		    {{ buildLink() }}
 		</p>
     </div>
 
     <div class="row choices">
-        <div class="col-xs-2 col-xs-offset-3"><a ui-sref="results">< Data ></a></div>
-        <div class="col-xs-2"><a ui-sref="pretrial"><strong>< Take Test ></strong></a></div>
-        <div class="col-xs-2"><a ui-sref="settings">< Settings ></a></div>
+        <div class="col-xs-2"><a ui-sref="^.countdown"><strong>< Take Test ></strong></a></div>
     </div>
 </div>
