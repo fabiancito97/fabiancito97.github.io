@@ -11,12 +11,12 @@ pvtApp.config(function($compileProvider) {
 
 pvtApp.config(function ($stateProvider) {
     $stateProvider.state('pretrial', {
-        url: '/',
+        url: '/pretrial',
         template: "<div ui-view></div>",
         controller: 'PreTrialCtrl'
     })
     .state('pretrial.instructions', {
-        url: '/instructions', //
+        url: '/', //instructions
         templateUrl: 'pretrial/pretrial.instructions.html',
         controller: 'PreTrialInstructionsCtrl'
     })
