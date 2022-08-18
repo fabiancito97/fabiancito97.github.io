@@ -1,6 +1,6 @@
-angular.module('pvtApp').controller('HomeCtrl', function ($scope, $window) {
+angular.module('pvtApp').controller('HomeCtrl', function ($scope, $location) {
 	$scope.buildLink = function(){
-      return $window.location.pathname
+      return $location.path()
     }
 
 });
