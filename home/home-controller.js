@@ -1,5 +1,7 @@
 angular.module('pvtApp').controller('HomeCtrl', function ($scope, $window) {
-	var pvtUrl = $window.URL;
+	$scope.buildLink = function(){
+      return $window.location.pathname
+    }
 
 });
 
