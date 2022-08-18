@@ -4,17 +4,14 @@ angular.module('pvtApp').factory('trialStore', function ($window, $location) {
     var store = $window.localStorage;
     var undoData = null;
 	var url = $location.absUrl();
-	var identifier = url.substring(url.lastIndexOf('?id=') + 4, url.lastIndexOf('#/trial'));	
 	
-
     trialStore.save = function (data, id) {
         if (!(data && data.length > 0)) {
             return false;
         }
 		
-		// create an id with url, type "https://fabiancito97.github.io/?id=<id>#/trial"
-		
-		var id = $location.absUrl() // get url;
+		// create an id with url, similar to "https://fabiancito97.github.io/?id=<id>#/trial"
+		var id = $location.absUrl(); // get url;
 		// clean url to get the identifier
 		var id = id.substring(0, id.absUrl().lastIndexOf('#/trial'));
         var id = id.substring(id.lastIndexOf("/") + 1);
