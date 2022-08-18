@@ -1,6 +1,6 @@
-angular.module('pvtApp').controller('HomeCtrl', function ($scope) {
-	var url = window.location.href;
-    document.getElementById("id-pvt").innerHTML = url;
+angular.module('pvtApp').controller('HomeCtrl', function ($scope, $window, $document) {
+	var url = $window.location.href;
+    $document.getElementById("id-pvt").innerHTML = url;
 
 });
 
