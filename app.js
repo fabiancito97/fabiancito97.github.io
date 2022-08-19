@@ -21,7 +21,7 @@ pvtApp.config(function ($stateProvider) {
         controller: 'PreTrialInstructionsCtrl'
     })
     .state('pretrial.countdown', {
-        url: '/',
+        url: '/countdown',
         templateUrl: 'pretrial/pretrial.countdown.html',
         controller: 'PreTrialCountdownCtrl'
     })
@@ -68,5 +68,5 @@ pvtApp.config(function ($stateProvider) {
 // set the first states!!!!
 
 pvtApp.config(function ($urlRouterProvider) {
-    $urlRouterProvider.otherwise('/')
+    $urlRouterProvider.otherwise('/pretrial/countdown')
 });
