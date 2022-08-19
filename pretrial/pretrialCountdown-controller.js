@@ -1,5 +1,5 @@
 angular.module('pvtApp').controller('PreTrialCountdownCtrl', function ($scope, $timeout, $interval, $window, $state) {
-    $scope.seconds = 5;
+    $scope.seconds = 15;
     $scope.back = function () {
         $window.history.back();
     };

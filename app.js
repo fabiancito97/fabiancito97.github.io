@@ -21,7 +21,7 @@ pvtApp.config(function ($stateProvider) {
         controller: 'PreTrialInstructionsCtrl'
     })
     .state('pretrial.countdown', {
-        url: '/countdown',
+        url: '/',
         templateUrl: 'pretrial/pretrial.countdown.html',
         controller: 'PreTrialCountdownCtrl'
     })
@@ -53,7 +53,7 @@ pvtApp.config(function ($stateProvider) {
         templateUrl: 'results/results.empty.html'
     })
     .state('home', {
-        url: '/',
+        url: '/home',
         templateUrl: 'home/home.html',
         controller: 'HomeCtrl'
     })
