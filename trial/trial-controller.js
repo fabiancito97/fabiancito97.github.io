@@ -25,12 +25,12 @@ angular.module('pvtApp').controller('TrialCtrl', function ($scope, $state, $docu
     });
 
     
-    //trialTimer.onDisable.add(function () {
-    //    var date = trialStore.save($scope.data);
-	//	// go to final template
-    //    //$state.go('results.trial', { trialId: date }); // loads most recent result
-	//	$state.go('final'); // go to final
-    //});
+    trialTimer.onDisable.add(function () {
+        //var date = trialStore.save($scope.data);
+		// go to final template
+        //$state.go('results.trial', { trialId: date }); // loads most recent result
+		$state.go('final'); // go to final
+    });
 
     $scope.$on("$destroy", function () {
         $document.off("keydown", keyBindHandler);
