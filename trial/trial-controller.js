@@ -1,7 +1,9 @@
-angular.module('pvtApp').controller('TrialCtrl', function ($scope, $state, $document, trialTimer, settings) {//trialStore,
+angular.module('pvtApp').controller('TrialCtrl', function ($scope, $state, $document, trialTimer) {//trialStore, , settings
     $scope.data = [];
     $scope.timer = trialTimer;
     trialTimer.reset();
+	
+	var trial_length = 60; // seconds
 
     var keyBindHandler = function (e) {
         if (e.keyCode === 32) { // <Space>
@@ -35,7 +37,9 @@ angular.module('pvtApp').controller('TrialCtrl', function ($scope, $state, $docu
         $document.off("click", mouseHandler);
     });
 
-    trialTimer.enable(settings.trial_length * 1000);
+    //settings.
+
+    trialTimer.enable(trial_length * 1000); 
     $document.on("keydown", keyBindHandler);
     $document.on("click", mouseHandler);
 });

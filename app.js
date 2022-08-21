@@ -15,42 +15,15 @@ pvtApp.config(function ($stateProvider) {
         template: "<div ui-view></div>",
         controller: 'PreTrialCtrl'
     })
-    .state('pretrial.instructions', {
-        url: '/instructions', //
-        templateUrl: 'pretrial/pretrial.instructions.html',
-        controller: 'PreTrialInstructionsCtrl'
-    })
     .state('pretrial.countdown', {
         url: '/countdown',
         templateUrl: 'pretrial/pretrial.countdown.html',
         controller: 'PreTrialCountdownCtrl'
     })
-    .state('settings', {
-        url: '/settings',
-        templateUrl: 'settings/settings.html',
-        controller: 'SettingsCtrl'
-    })
     .state('trial', {
         url: '/trial',
         templateUrl: 'trial/trial.html',
         controller: 'TrialCtrl'
-    })
-    .state('results', {
-        url: '/results',
-        templateUrl: 'results/results.html',
-        controller: 'ResultsCtrl'
-    })
-    .state('results.trial', {
-        url: '/:trialId',
-        templateUrl: 'results/results.trial.html',
-        controller: 'ResultsTrialCtrl'
-    })
-    .state('results.all', {
-        templateUrl: 'results/results.all.html',
-        controller: 'AllResultsCtrl'
-    })
-    .state('results.empty', {
-        templateUrl: 'results/results.empty.html'
     })
     .state('home', {
         url: '/home',
@@ -63,6 +36,33 @@ pvtApp.config(function ($stateProvider) {
         controller: 'FinalCtrl'
     })
 });
+
+//.state('pretrial.instructions', {
+//        url: '/instructions', //
+//        templateUrl: 'pretrial/pretrial.instructions.html',
+//        controller: 'PreTrialInstructionsCtrl'
+//    })
+//    .state('settings', {
+//        url: '/settings',
+//        templateUrl: 'settings/settings.html',
+//        controller: 'SettingsCtrl'
+//    .state('results', {
+//        url: '/results',
+//        templateUrl: 'results/results.html',
+//        controller: 'ResultsCtrl'
+//    })
+//    .state('results.trial', {
+//        url: '/:trialId',
+//        templateUrl: 'results/results.trial.html',
+//        controller: 'ResultsTrialCtrl'
+//    })
+//    .state('results.all', {
+//        templateUrl: 'results/results.all.html',
+//        controller: 'AllResultsCtrl'
+//    })
+//    .state('results.empty', {
+//        templateUrl: 'results/results.empty.html'
+//    })
 
 
 // set the first states!!!!
