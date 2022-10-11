@@ -15,7 +15,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
 	"lite": "lite-server",
-    "postinstall": "ng build --prod"
+    "heroku-postbuild": "ng build --prod"
   }, 
   "private": true,
   "ignore": [
@@ -33,11 +33,11 @@
     "moment": "~2.8.3",
     "chartjs": "~x.x",
     "jquery": "~2.1.1",
-    "bootstrap": "~3.2.0"
+    "bootstrap": "~3.2.0",
+	"@angular/compiler-cli": "x.x.x"
   },
   "devDependencies": {
-	"@angular/cli": "x.x.x",
-	"@angular/compiler-cli": "x.x.x"
+	"@angular/cli": "x.x.x"	
   },  
   "resolutions": {
     "angular": "1.3.x",
