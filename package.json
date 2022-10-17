@@ -10,7 +10,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ng build --prod",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -33,7 +33,9 @@
     "jquery": "~2.1.1",
     "bootstrap": "~3.2.0",
     "@angular/cli": "^7.1.4",
-    "@angular/compiler-cli": "~7.0.0",
+    "@angular/compiler-cli": "~7.1.4"
+  },
+  "devDependencies": {
     "@angular/animations": "~7.0.0",
     "@angular/common": "~7.0.0",
     "@angular/compiler": "~7.0.0",
