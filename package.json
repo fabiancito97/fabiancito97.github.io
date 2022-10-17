@@ -1,6 +1,6 @@
 {
-  "name": "demo-deploy",
-  "version": "0.0.0",
+  "name": "PersonalPVT",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
@@ -12,10 +12,10 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^14.2.0",
-    "@angular/cli": "~14.2.5",
+    "@angular/cli": "^14.2.6",
     "@angular/common": "^14.2.0",
     "@angular/compiler": "^14.2.0",
-    "@angular/compiler-cli": "^14.2.0",
+    "@angular/compiler-cli": "^14.2.6",
     "@angular/core": "^14.2.0",
     "@angular/forms": "^14.2.0",
     "@angular/platform-browser": "^14.2.0",
