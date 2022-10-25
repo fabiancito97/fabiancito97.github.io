@@ -6,9 +6,7 @@ var dataBase = 'postgres://tzujgzncupqavl:ef5edc1b9a70a0e75be9387c72ac69bdfb7b49
 
 app.get('/', function (req, res) {
 	res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-.get('/db', async (req, res) => {
+}).get('/db', async (req, res) => {
     try {
       const client = await pool.connect();
       const result = await client.query('SELECT * FROM test_table');
