@@ -187,7 +187,8 @@
     "wide-align": "^1.1.5",
     "wrappy": "^1.0.2",
     "ejs": "^2.3.1",
-    "express": "~4.9.x"
+    "express": "~4.9.x",
+    "pg": "8.8.0"
   },
   "devDependencies": {},
   "scripts": {
