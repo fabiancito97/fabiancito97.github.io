@@ -2,8 +2,7 @@ var express = require('express');
 var path = require('path');
 var app = express();
 
-var dataBase = 'postgres://tzujgzncupqavl:ef5edc1b9a70a0e75be9387c72ac69bdfb7b49e07e13cca7c680eb7aec34e2ac@ec2-23-20-140-229.compute-1.amazonaws.com:5432/d8pcl8k4iefts8'
-
+var dataBase = 'postgres://tzujgzncupqavl:ef5edc1b9a70a0e75be9387c72ac69bdfb7b49e07e13cca7c680eb7aec34e2ac@ec2-23-20-140-229.compute-1.amazonaws.com:5432/d8pcl8k4iefts8';
 
 app.get('/', function (req, res) {
 	res.sendFile(path.join(__dirname, 'index.html'));
@@ -20,7 +19,7 @@ app.get('/', function (req, res) {
       console.error(err);
       res.send("Error " + err);
     }
-  })
+  });
 
 const { Pool } = require('pg');
 const pool = new Pool({
