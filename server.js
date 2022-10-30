@@ -2,6 +2,9 @@ var express = require('express');
 var path = require('path');
 var app = express();
 
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs')
+
 app.get('/', function (req, res) {
 	res.sendFile(path.join(__dirname, 'index.html'));
 }).get('/db', async (req, res) => {
@@ -13,7 +16,7 @@ app.get('/', function (req, res) {
       client.release();
     } catch (err) {
       console.error(err);
-      res.json({ error: err });
+      res.send("Error " + err);
     }
   });
 
@@ -28,3 +31,4 @@ const pool = new Pool({
 
 app.use(express.static(__dirname)); // set static files location, in this case the route, add a file name if not
 app.listen(process.env.PORT || 3000);
+
