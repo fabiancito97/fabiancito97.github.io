@@ -1,5 +1,4 @@
-angular.module('pvtApp').factory('trialStore', function () {
-	args = $window, $location;
+angular.module('pvtApp').factory('trialStore', function ($location) {
     var trialStore = { };
     var prefix = "TRIAL";
 	

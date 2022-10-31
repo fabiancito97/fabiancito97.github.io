@@ -1,6 +1,6 @@
-angular.module('pvtApp').controller('TrialCtrl', function ($rootScope, $state, $document, trialTimer, trialStore) {//, , settings
-    $rootScope.data = [];
-    $rootScope.timer = trialTimer;
+angular.module('pvtApp').controller('TrialCtrl', function ($scope, $state, $document, trialTimer, trialStore) {//, , settings
+    $scope.data = [];
+    $scope.timer = trialTimer;
     trialTimer.reset();
 	
 	var trial_length = 60; // seconds
@@ -21,18 +21,18 @@ angular.module('pvtApp').controller('TrialCtrl', function ($rootScope, $state, $
 
 
     trialTimer.onStop.add(function (value) {
-        if (value) { $rootScope.data.push(value); }
+        if (value) { $scope.data.push(value); }
     });
 
     
     trialTimer.onDisable.add(function () {
-        var date = trialStore.save($rootScope.data);
+        var date = trialStore.save($scope.data);
 		// go to final template
         //$state.go('results.trial', { trialId: date }); // loads most recent result
 		$state.go('final'); // go to final
     });
 
-    $rootScope.$on("$destroy", function () {
+    $scope.$on("$destroy", function () {
         $document.off("keydown", keyBindHandler);
         $document.off("click", mouseHandler);
     });
