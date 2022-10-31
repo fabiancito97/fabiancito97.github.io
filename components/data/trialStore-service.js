@@ -32,8 +32,8 @@ angular.module('pvtApp').factory('trialStore', function ($location) {
 		
 		var dataColl = data.join()
 		
-		await pool.query(`INSERT INTO "pvtData" ("Id", "Pvt") VALUES ($1, $2)` [id, dataColl]);
-		await pool.end();
+		pool.query(`INSERT INTO "pvtData" ("Id", "Pvt") VALUES ($1, $2)` [id, dataColl]);
+		pool.end();
         return id;
     };
 
