@@ -1,5 +1,5 @@
 var express = require('express');
-const ejs = require('ejs');
+//const ejs = require('ejs')
 var path = require('path');
 var app = express();
 
@@ -11,8 +11,8 @@ const pool = new Pool({
   }
 });
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+//app.set('views', path.join(__dirname, 'views'))
+//app.set('view engine', 'ejs')
 
 // routes
 
@@ -25,7 +25,7 @@ app.get('/db', async (req, res) => {
       const client = await pool.connect();
       const result = await client.query('SELECT * FROM test_table');
       const results = { 'results': (result) ? result.rows : null};
-      res.render('pages/db', results );
+      res.send(JSON.stringify(results));
       client.release();
     } catch (err) {
       console.error(err);
