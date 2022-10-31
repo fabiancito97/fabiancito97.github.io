@@ -23,7 +23,7 @@ app.get('/', function (req, res) {
 app.get('/db', async (req, res) => {
     try {
       const client = await pool.connect();
-      const result = await client.query('SELECT * FROM alumnos');
+      const result = await client.query('SELECT * FROM pvtData');
       const results = { 'results': (result) ? result.rows : null};
       res.send(JSON.stringify(results));
       client.release();

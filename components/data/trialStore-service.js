@@ -1,9 +1,19 @@
 angular.module('pvtApp').factory('trialStore', function () {
-	/* args = $window, $location
+	args = $window, $location;
     var trialStore = { };
     var prefix = "TRIAL";
-    var store = $window.localStorage;
-    var undoData = null;
+	
+	const { Pool } = require('pg');
+    const pool = new Pool({
+      connectionString: process.env.DATABASE_URL,
+      ssl: {
+        rejectUnauthorized: false
+      }
+    });
+    
+	//var store = $window.localStorage;
+    
+	var undoData = null;
 	var url = $location.absUrl();
 	
     trialStore.save = function (data, id) {
@@ -20,8 +30,11 @@ angular.module('pvtApp').factory('trialStore', function () {
 		
         // if empty, asing a identifier based on miliseconds since 01-01-1970;
         else id = prefix + ',' + Date.now();
-
-        store.setItem(id, data.join());
+		
+		var dataColl = data.join()
+		
+		await pool.query(`INSERT INTO "pvtData" ("Id", "Pvt") VALUES ($1, $2)` [id, dataColl]);
+		await pool.end();
         return id;
     };
 
