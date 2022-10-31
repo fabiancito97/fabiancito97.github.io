@@ -37,27 +37,27 @@ angular.module('pvtApp').factory('trialStore', function ($location) {
         return id;
     };
 
-    trialStore.load = function (id) {
-        return store.getItem(id).split(',').map(parseFloat);
-    };
+    //trialStore.load = function (id) {
+    //    return store.getItem(id).split(',').map(parseFloat);
+    //};
 
-    trialStore.remove = function (id) {
-        return store.removeItem(prefix + ',' + id);
-    };
+    //trialStore.remove = function (id) {
+    //    return store.removeItem(prefix + ',' + id);
+    //};
 
-    trialStore.all = function () {
-        var results = [];
-        for (var i = 0; i < store.length; i++) {
-            var key = store.key(i);
-            if (key.substr(0, prefix.length) === prefix) {
-                results.push({
-                    'date': parseInt(key.substr(prefix.length + 1)),
-                    'data': store.getItem(key).split(',').map(parseFloat)
-                });
-            }
-        }
-        return results;
-    };
+    //trialStore.all = function () {
+    //    var results = [];
+    //    for (var i = 0; i < store.length; i++) {
+    //        var key = store.key(i);
+    //        if (key.substr(0, prefix.length) === prefix) {
+    //            results.push({
+    //                'date': parseInt(key.substr(prefix.length + 1)),
+    //                'data': store.getItem(key).split(',').map(parseFloat)
+    //            });
+    //        }
+    //    }
+    //    return results;
+    //};
 
     trialStore.deleteAll = function () {
         undoData = trialStore.all();
