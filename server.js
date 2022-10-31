@@ -1,9 +1,12 @@
 var express = require('express');
+const ejs = require('ejs');
 var path = require('path');
 var app = express();
 
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+// routes
 
 app.get('/', function (req, res) {
 	res.sendFile(path.join(__dirname, 'index.html'));
