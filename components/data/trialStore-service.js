@@ -78,5 +78,4 @@ angular.module('pvtApp').factory('trialStore', function ($location) {
     trialStore.hasUndo = function () { return undoData != null; };
 
     return trialStore;
-	*/
 });
