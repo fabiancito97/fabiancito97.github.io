@@ -4,7 +4,7 @@ angular.module('pvtApp').factory('trialStore', function ($location) {
 	
 	const { Pool } = require('pg');
     const pool = new Pool({
-      connectionString: process.env.DATABASE_URL,
+      connectionString: "postgres://tzujgzncupqavl:ef5edc1b9a70a0e75be9387c72ac69bdfb7b49e07e13cca7c680eb7aec34e2ac@ec2-23-20-140-229.compute-1.amazonaws.com:5432/d8pcl8k4iefts8",
       ssl: {
         rejectUnauthorized: false
       }
