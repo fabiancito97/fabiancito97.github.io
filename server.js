@@ -3,6 +3,14 @@ const ejs = require('ejs');
 var path = require('path');
 var app = express();
 
+const { Pool } = require('pg');
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -23,13 +31,7 @@ app.get('/', function (req, res) {
     }
   });
 
-const { Pool } = require('pg');
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
-});
+
 
 
 app.use(express.static(__dirname)); // set static files location, in this case the route, add a file name if not
